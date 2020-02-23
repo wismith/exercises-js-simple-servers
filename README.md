@@ -30,7 +30,6 @@ that come with our computers.
   - [MOTD Server](#motd-server)
   - [Your Own Server](#your-own-server)
 
-
 ## Getting Started
 
 1. Fork this repository
@@ -188,10 +187,10 @@ waiting again for the next client to connect.
 You can run
 
 ```console
-ruby echo-server
+node echo-server.js
 ```
 
-but it won't do anything yet.  Open up `echo-server` and take a stab at
+but it won't do anything yet.  Open up `echo-server.js` and take a stab at
 implementing the "echo" functionality.
 
 To check whether your server is doing what you expect, connect to it using
@@ -209,23 +208,16 @@ Let's hook up the "hot or cold" kata from Week 1 to a server.  If you don't
 remember, the "hot or cold" kata is a command-line guessing game that tells
 us whether our guess is too high, too low, or just right.
 
-See `hot-or-cold-server` for more details.
+See `hot-or-cold-server.js` for more details.
 
 ### MOTD Server
 
-"MOTD" stands for "message of the day."  Starting from `motd-server`, write a
+"MOTD" stands for "message of the day."  Starting from `motd-server.js`, write a
 server that sends every client the contents of `motd.txt`.
 
 ### Your Own Server
 
-Write a server of your own!  It can do anything you want, honestly.  Some areas
-of investigation might be:
-
-1. How do you write a server that can handle multiple clients simultaneously?
-1. How do you write a server that allows clients to interact with each other,
-   e.g., a chat server?
-1. What issues would crop up if you started to allow clients to request
-   *arbitrary* files from the server rather than a fixed file like `motd.txt`?
+TBD
 
 [time-server-screenshot]:http://f.cl.ly/items/1Y1f2s3u3K0O2c1I2J2a/Screen%20Shot%202014-06-09%20at%202.33.39%20AM.png
 [time-telnet-screenshot]:http://f.cl.ly/items/0P3j0V2r1f3R1l331T1h/Screen%20Shot%202014-06-09%20at%202.36.49%20AM.png

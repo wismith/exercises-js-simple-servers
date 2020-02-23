@@ -1,5 +1,4 @@
 let net = require('net');
-let fs = require('fs');
 
 let serverLog = require('./lib/serverLog');
 
