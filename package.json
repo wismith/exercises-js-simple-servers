@@ -1,7 +1,7 @@
 {
-  "name": "template-javascript",
-  "version": "0.0.0",
-  "description": "JavaScript template",
+  "name": "exercises-js-simple-servers",
+  "version": "0.1.0",
+  "description": "A series of exercises to build simple servers in JS",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jfarmer/template-javascript.git"
+    "url": "git+https://github.com/jfarmer/exercises-js-simple-servers.git"
   },
   "keywords": [
     "javascript",
@@ -29,7 +29,7 @@
   "author": "Jesse Farmer <jesse@20bits.com>",
   "license": "CC-BY-SA-4.0",
   "bugs": {
-    "url": "https://github.com/jfarmer/template-javascript/issues"
+    "url": "https://github.com/jfarmer/exercises-js-simple-servers/issues"
   },
-  "homepage": "https://github.com/jfarmer/template-javascript#readme"
+  "homepage": "https://github.com/jfarmer/exercises-js-simple-servers#readme"
 }
