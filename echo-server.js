@@ -11,7 +11,9 @@ let SERVER_PORT = 2001;
 
 let server = net.createServer(function(connection) {
   let clientAddress = connection.remoteAddress;
+  let promptInput = () => connection.write('Echo server listening for your input:\n');
 
+  promptInput();
   serverLog('CONNECT', `Client at ${clientAddress} connected`);
 
   // This tells Node what to do whenever we receive data over this connection.
@@ -19,13 +21,16 @@ let server = net.createServer(function(connection) {
   connection.on('data', function(clientData) {
     // Use console.log to record when a client sends us data.
     // Use connection.write(...) to send data to the client
-
+    console.log(`Client ${clientAddress} input data: "${clientData}"`); // This puts the ending quotation mark on the next line in the console...
+    connection.write('Echoing your input back to you below...\n');
+    connection.write(clientData);
+    promptInput();
     // Remember, an echo server sends back exactly what was received.
   });
 
   // Print a log message when a client disconnects
   connection.on('end', function() {
-    serverLog('DISCONNET', `Client ${clientAddress} disconnected`);
+    serverLog('DISCONNECT', `Client ${clientAddress} disconnected`);
   });
 });
 
