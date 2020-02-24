@@ -151,6 +151,12 @@ below.
 
 To connect to a server, use the `nc` command that comes with your computer. `nc` is short for "netcat", a generic tool for connecting to servers and sending data over the network.
 
+**Note**: Other people can connect to your servers, but they need your IP address. On a Mac, run the following command to get your IP address:
+
+```console
+ipconfig getifaddr en0
+```
+
 ### Time Server
 
 We've built `time-server.js` for you to show you what a basic network server
