@@ -25,7 +25,7 @@ let server = net.createServer(function(connection) {
 
   // Print a log message when a client disconnects
   connection.on('end', function() {
-    serverLog('DISCONNET', `Client ${clientAddress} disconnected`);
+    serverLog('DISCONNECT', `Client ${clientAddress} disconnected`);
   });
 });
 
