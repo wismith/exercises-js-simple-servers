@@ -6,7 +6,6 @@ This set of exercises isn't done yet. The following needs to be done before fina
 
 - [ ] Replace old `telnet` screenshots with `nc` screenshots
 - [ ] Possibly record screencasts
-- [ ] Add iteration for writing your own server with some suggestions for servers to write
 
 In these exercises, we're going to try to understand more about how computers talk
 to each other over a network. To do that, we're going to actually build a
@@ -28,7 +27,8 @@ that come with our computers.
   - [Echo Server](#echo-server)
   - [Hot or Cold Server](#hot-or-cold-server)
   - [MOTD Server](#motd-server)
-  - [Your Own Server](#your-own-server)
+  - [Document Server](#document-server)
+  - [Your Own Server (Stretch)](#your-own-server-stretch)
 
 ## Getting Started
 
@@ -221,9 +221,26 @@ See `hot-or-cold-server.js` for more details.
 "MOTD" stands for "message of the day."  Starting from `motd-server.js`, write a
 server that sends every client the contents of `motd.txt`.
 
-### Your Own Server
+### Document Server
 
-TBD
+Create a file called `document-server.js` and make it work as follows:
+
+1. Create a directory named `files/` and add some random text files.
+1. When a client connects, they enter a filename and hit enter
+1. The server looks in the `files/` for the appropriate file and responds with the contents of the file (if it exists).
+1. The server closes the connection
+
+For example, if `files/hello.txt` contained
+
+```text
+Hello, world! How are you today?
+```
+
+Then a client should be able to connect and type `hello.txt` to see the contents of that file.
+
+### Your Own Server (Stretch)
+
+Think up an idea for your own server and implement it!
 
 [time-server-screenshot]:http://f.cl.ly/items/1Y1f2s3u3K0O2c1I2J2a/Screen%20Shot%202014-06-09%20at%202.33.39%20AM.png
 [time-telnet-screenshot]:http://f.cl.ly/items/0P3j0V2r1f3R1l331T1h/Screen%20Shot%202014-06-09%20at%202.36.49%20AM.png
