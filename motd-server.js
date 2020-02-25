@@ -17,5 +17,5 @@ let server = net.createServer(function(connection) {
 });
 
 server.listen(SERVER_PORT, function() {
-  serverLog('LISTENING', `Hot-Or-Cold server listening on port ${SERVER_PORT}`);
+  serverLog('LISTENING', `MOTD server listening on port ${SERVER_PORT}`);
 });
