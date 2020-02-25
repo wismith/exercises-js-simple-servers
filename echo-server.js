@@ -21,13 +21,14 @@ let server = net.createServer(function(connection) {
   connection.on('data', function(clientData) {
     // Use console.log to record when a client sends us data.
     // Use connection.write(...) to send data to the client
-    console.log(`Client ${clientAddress} input data: "${clientData}"`); // This puts the ending quotation mark on the next line in the console...
+    console.log(typeof clientData, clientData);
+    let clientDataTrimmed = clientData.toString().trimRight();
+    console.log(`Client ${clientAddress} input data: "${clientDataTrimmed}"`); // This puts the ending quotation mark on the next line in the console...
     connection.write('Echoing your input back to you below...\n');
     connection.write(clientData);
     promptInput();
     // Remember, an echo server sends back exactly what was received.
   });
-
   // Print a log message when a client disconnects
   connection.on('end', function() {
     serverLog('DISCONNECT', `Client ${clientAddress} disconnected`);
