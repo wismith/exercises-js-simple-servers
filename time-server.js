@@ -23,6 +23,7 @@ let server = net.createServer(function(connection) {
   // Terminate the client's connection. We might not always want to
   // end the connection immediately after sending the client some data.
   connection.end();
+  connection.destroy();
 });
 
 // Start the server, listening on port SERVER_PORT
