@@ -25,17 +25,23 @@ let server = net.createServer(function(connection) {
 
       // Use connection.write(...) to print out a useful error message
       // and some instructions for the user.
+      connection.write('Error: Input must be an INTEGER value\n');
     } else if (userGuess < numberToGuess) {
       // The user's guess was too small.
       // Use connection.write(...) to tell them they're too cold.
+      connection.write(`Your guess ${userGuess} is a little cold! Keep going!\n`);
+
     } else if (userGuess > numberToGuess) {
       // The user's guess was too large.
       // Use connection.write(...) to tell them they're too hot.
+      connection.write(`Your guess ${userGuess} is a little hot! Keep going!\n`);
     } else if (userGuess === numberToGuess) {
       // The user guessed correctly!
 
       // Use connection.write(...) to tell them they guessed correctly
       // Use connection.end() to end the client connection
+      connection.write(`Your guess ${userGuess} is correct! Disconnecting you now.\n`);
+      connection.end();
     }
   });
 
